@@ -18,53 +18,58 @@ public class Main {
         // Получение списка сотрудников со всеми данными
         EmployeeBook e = new EmployeeBook();
         System.out.println("СПИСОК ВСЕХ СОТРУДНИКОВ");
-        e.allEmployees(e.employees);
+        e.allEmployees();
         System.out.println();
         // Сумма затрат на зарплаты в месяц
-        e.salaryMonthsSum(e.employees);
+        e.salaryMonthsSum();
         System.out.println();
         // Сотрудник с минимальной зарплатой
-        e.minSalaryEmployee(e.employees);
+        e.minSalaryEmployee();
         System.out.println();
         // Сотрудник с максимальной зарплатой
-        e.maxSalaryEmployee(e.employees);
+        e.maxSalaryEmployee();
         System.out.println();
         // Среднее значение зарплат
-        e.averageMonthsSalary(e.employees);
+        e.averageMonthsSalary();
         System.out.println();
         // Ф.И.О. всех сотрудников
         System.out.println("Ф.И.О. всех сотрудников:");
-        e.allNames(e.employees);
+        e.allNames();
         System.out.println();
         // Задания повышенной сложности
         // Увеличение зарплат в index раз
-        e.salaryIndex(e.employees, 1.2);
+        e.salaryIndex(1.2);
         System.out.println();
         // Сотрудники выбранного отдела с минимальной зарплатой
-        e.departmentEmployeesMinSalary(e.employees, (byte) 5);
+        e.departmentEmployeesMinSalary((byte) 5);
         System.out.println();
         // Сотрудники выбранного отдела с максимальной зарплатой
-        e.departmentEmployeesMaxSalary(e.employees, (byte) 5);
+        e.departmentEmployeesMaxSalary((byte) 5);
         System.out.println();
         // Сумма затрат в месяц на зарплаты по отделу
-        e.departmentSalaryMonthsSum(e.employees, (byte) 5);
+        e.departmentSalaryMonthsSum((byte) 5);
         System.out.println();
         // Среднее значение зарплат в выбранном отделе
-        e.departmentAverageMonthsSalary(e.employees, (byte) 5);
+        e.departmentAverageMonthsSalary((byte) 5);
         System.out.println();
         // Проиндексировать зарплату всех сотрудников отдела на процент, который приходит в качестве параметра
-        e.departmentSalaryIndex(e.employees, (byte) 3, 1.3);
+        e.departmentSalaryIndex((byte) 3, 1.3);
         System.out.println();
         // Список сотрудников выбранного отдела
-        e.departmentEmployees(e.employees, (byte) 5);
+        e.departmentEmployees((byte) 5);
         System.out.println();
         // Получение всех сотрудников с зарплатой меньше заданного числа
         System.out.println("Все сотрудники с зарплатой меньше заданного числа:");
-        e.employeesSalaryLessThan(e.employees, 130_000);
+        e.employeesSalaryLessThan(130_000);
         System.out.println();
         // Получение всех сотрудников с зарплатой больше или равной заданному числу
         System.out.println("Все сотрудники с зарплатой больше или равной заданному числу:");
-        e.employeesSalaryMoreThan(e.employees, 130_000);
+        e.employeesSalaryMoreThan(130_000);
         System.out.println();
+        e.deleteEmployee(2);
+        e.addEmployee("Егоров", "Антон", "Евгеньевич", (byte) 4, 190_000);
+        e.addEmployee("Андреев", "Антон", "Евгеньевич", (byte) 4, 190_000);
+        System.out.println();
+        e.allEmployees();
     }
 }
